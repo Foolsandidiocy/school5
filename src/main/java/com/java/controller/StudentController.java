@@ -29,6 +29,6 @@ public class StudentController {
     }
     @RequestMapping("/hello4")
     public String hello2(){
-        return "垃圾";
+        return "你好";
     }
 }
