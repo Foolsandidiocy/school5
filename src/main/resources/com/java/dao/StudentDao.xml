@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.java.dao.StudentDao">
+    <resultMap id="studentMap" type="com.java.pojo.Students">
+        <result column="id" property="id"></result>
+        <result column="name" property="name"></result>
+        <result column="birth" property="birth"></result>
+        <result column="sex" property="sex"></result>
+        <collection property="score" ofType="com.java.pojo.Score">
+            <result column="id" property="id"></result>
+            <result column="classId" property="classId"></result>
+            <result column="score" property="score"></result>
+        </collection>
+    </resultMap>
+    <select id="queryStudentById" parameterType="string" resultType="com.java.pojo.Students">
+        select * from students where id=#{id}
+    </select>
+    <select id="queryStudent" parameterType="string" resultMap="studentMap">
+        select * from students s join score  sc on s.id=sc.id where s.id=#{id}
+    </select>
+</mapper>
