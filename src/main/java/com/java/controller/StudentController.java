@@ -34,6 +34,7 @@ public class StudentController {
     @RequestMapping("/hello5")
     public String hello3(){
         System.out.println("成功访问");
+        System.out.println("又一次成功访问");
         return "one piece";
     }
 }
