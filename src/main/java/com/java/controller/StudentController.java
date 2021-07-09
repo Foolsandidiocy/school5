@@ -31,4 +31,8 @@ public class StudentController {
     public String hello2(){
         return "垃圾";
     }
+    @RequestMapping("/hello5")
+    public String hello3(){
+        return "one piece";
+    }
 }
