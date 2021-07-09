@@ -23,4 +23,8 @@ public class StudentController {
     public Students queryStudent(String id){
         return studentService.queryStudent(id);
     }
+    @RequestMapping("/hello3")
+    public String hello(){
+        return "hello";
+    }
 }
