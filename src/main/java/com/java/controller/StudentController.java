@@ -29,7 +29,7 @@ public class StudentController {
     }
     @RequestMapping("/hello4")
     public String hello2(){
-        return "垃圾";
+        return "你好";
     }
     @RequestMapping("/hello5")
     public String hello3(){
